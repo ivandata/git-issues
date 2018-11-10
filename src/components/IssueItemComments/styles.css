@@ -1,0 +1,9 @@
+.issue-comments {
+  white-space: nowrap;
+  font-size: 12px;
+}
+
+.comments-count {
+  margin-left: 5px;
+  font-weight: bold;
+}

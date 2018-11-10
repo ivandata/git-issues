@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import IssueList from 'components/IssueList';
+import Footer from 'components/Footer';
 import './styles.css';
 
 class App extends Component {
@@ -55,6 +56,7 @@ class App extends Component {
         <main className="app-content">
           <IssueList {...issuesListProps }/>
         </main>
+        <Footer loading={this.state.isLoading}/>
       </div>
     );
   }

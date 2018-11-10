@@ -1,0 +1,28 @@
+.issue-item {
+  border-top: 1px solid #2A2937;
+  padding: 8px 16px;
+  display: flex;
+}
+
+.issue-title {
+  padding: 0 8px;
+  flex-grow: 1;
+  display: inline-block;
+}
+
+.issue-item:hover {
+  background-color: #2A2937;
+}
+
+.issue-link {
+  line-height: 20px;
+  font-weight: bold;
+  color: #E6E8BF;
+  margin-right: 10px;
+}
+
+.issue-desc {
+  margin-top: 5px;
+  font-size: 12px;
+}
+

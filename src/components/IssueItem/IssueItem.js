@@ -13,7 +13,8 @@ const IssueItem = ({issues}) => {
         <div className='issue-title'>
           <a href={issue.html_url} className='issue-link'>{issue.title}</a>
           <IssueLabel labels={issue.labels}/>
-          <div className='issue-desc'>#{issue.number}&nbsp;opened {getDays(issue.created_at)} ago by&nbsp;
+          <div className='issue-desc'>
+            #{issue.number}&nbsp;opened {getDays(issue.created_at)} ago by&nbsp;
             <a className='issue-user' href={issue.user.html_url}>{issue.user.login}</a>
           </div>
         </div>

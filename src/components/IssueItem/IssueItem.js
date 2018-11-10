@@ -25,5 +25,4 @@ const IssueItem = ({issues}) => {
 
 };
 
-
 export default IssueItem;

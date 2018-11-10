@@ -3,6 +3,7 @@ import Enzyme, { shallow } from 'enzyme';
 import { CommentsIcon } from 'components/Icons';
 import IssueItemComments from 'components/IssueItemComments';
 import Adapter from 'enzyme-adapter-react-16';
+import { expect } from "chai";
 
 Enzyme.configure({ adapter: new Adapter() });
 
@@ -18,11 +19,23 @@ describe('<IssueItemComments />', () => {
   );
 
   it('should render the CommentsIcon', () => {
-    expect(renderedComponent.contains(<CommentsIcon />)).toEqual(true);
+    expect(renderedComponent.contains(<CommentsIcon />)).to.equal(true);
   });
 
   it('should have right url', () => {
-    expect(renderedComponent.first().props()['href']).toEqual(comments.url);
+    expect(renderedComponent.first().props()['href']).to.equal(comments.url);
+  });
+
+  it('should have right class name', () => {
+    expect(renderedComponent.hasClass('issue-comments')).to.equal(true);
+  });
+
+  it('should render count container', () => {
+    expect(renderedComponent.find('.comments-count')).to.have.lengthOf(1);
+  });
+
+  it('should have right count', () => {
+    expect(renderedComponent.find('.comments-count').text()).to.equal(`${comments.comments}`);
   });
 
   it('should not render anything if nothing interesting is provided', () => {
@@ -32,6 +45,6 @@ describe('<IssueItemComments />', () => {
       <IssueItemComments count={comments.comments} url={comments.url} />
     );
 
-    expect(renderedComponent.html()).toEqual(null);
+    expect(renderedComponent.html()).to.equal(null);
   });
 });

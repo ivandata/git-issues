@@ -23,5 +23,13 @@ describe('<CommentsIcon />', () => {
 
   it('should have span wrapper', () => {
     expect(renderedComponent.first().type()).to.equal('span');
-  })
+  });
+
+  it('should has right wrapper class name', () => {
+    expect(renderedComponent.hasClass('icon')).to.equal(true);
+  });
+
+  it('should has right icon class name', () => {
+    expect(renderedComponent.find('svg').hasClass('icon-open')).to.equal(true);
+  });
 });

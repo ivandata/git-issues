@@ -8,7 +8,7 @@ import Adapter from 'enzyme-adapter-react-16';
 Enzyme.configure({ adapter: new Adapter() });
 
 describe('<Footer />', () => {
-  it('should render the Spinner', () => {
+  it('should render a Spinner', () => {
     const renderedComponent = shallow(<Footer />);
     expect(renderedComponent.contains(<Spinner className=''/>)).to.equal(true);
   });
@@ -23,7 +23,7 @@ describe('<Footer />', () => {
     expect(renderedComponent.contains(<Spinner className='loading'/>)).to.equal(false);
   });
 
-  it('should has right class name', () => {
+  it('should have right class name', () => {
     const renderedComponent = shallow(<Footer />);
     expect(renderedComponent.hasClass('app-footer')).to.equal(true);
   });

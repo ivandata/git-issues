@@ -7,7 +7,6 @@ import Adapter from 'enzyme-adapter-react-16';
 Enzyme.configure({ adapter: new Adapter() });
 
 describe('<IssueLabel />', () => {
-
   const labels = [
     {
       color: "e7e7e7",
@@ -28,7 +27,11 @@ describe('<IssueLabel />', () => {
   );
 
   it('should render all labels', () => {
-    expect(renderedComponent.find('.issue-label')).to.have.length(2);
+    expect(renderedComponent).to.have.length(2);
+  });
+
+  it('should have right class name', () => {
+    expect(renderedComponent.at(0).hasClass('issue-label')).to.equal(true);
   });
 
   it('should have right urls', () => {
@@ -41,7 +44,7 @@ describe('<IssueLabel />', () => {
     expect(renderedComponent.at(1).find('a').text()).to.equal(labels[1].name);
   });
 
-  it('should have right key-ids', () => {
+  it('should have right keys', () => {
     expect(renderedComponent.at(0).key()).to.equal(`label-${labels[0].id}`);
     expect(renderedComponent.at(1).key()).to.equal(`label-${labels[1].id}`);
   });

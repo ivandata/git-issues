@@ -1,6 +1,7 @@
 import React from 'react';
 import IssueItemComments from 'components/IssueItemComments';
 import IssueItemStatus from 'components/IssueItemStatus';
+import getDays from 'utils/getDays';
 import './styles.css';
 
 const IssueItem = ({issues}) => {
@@ -10,7 +11,7 @@ const IssueItem = ({issues}) => {
         <IssueItemStatus state={issue.state}/>
         <div className='issue-title'>
           <a href={issue.html_url} className='issue-link'>{issue.title}</a>
-          <div className='issue-desc'>#{issue.number}&nbsp;opened {issue.created_at} ago by&nbsp;
+          <div className='issue-desc'>#{issue.number}&nbsp;opened {getDays(issue.created_at)} ago by&nbsp;
             <a className='issue-user' href={issue.user.html_url}>{issue.user.login}</a>
           </div>
         </div>

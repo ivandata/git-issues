@@ -7,7 +7,10 @@
     "prop-types": "^15.6.2",
     "react": "^16.6.1",
     "react-dom": "^16.6.1",
-    "react-scripts": "2.1.1"
+    "react-redux": "^5.1.1",
+    "react-scripts": "2.1.1",
+    "redux": "^4.0.1",
+    "redux-thunk": "^2.3.0"
   },
   "scripts": {
     "start": "cross-env NODE_PATH=src react-scripts start",
@@ -28,6 +31,7 @@
     "babel-cli": "^6.26.0",
     "chai": "^4.2.0",
     "enzyme": "^3.7.0",
-    "enzyme-adapter-react-16": "^1.7.0"
+    "enzyme-adapter-react-16": "^1.7.0",
+    "redux-logger": "^3.0.6"
   }
 }

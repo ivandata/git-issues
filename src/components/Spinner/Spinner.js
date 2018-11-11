@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './styles.css';
 
 const Spinner = ({className}) => {
@@ -15,6 +16,10 @@ const Spinner = ({className}) => {
     </span>
     </div>
   )
+};
+
+Spinner.propTypes = {
+  className: PropTypes.string
 };
 
 export default Spinner;

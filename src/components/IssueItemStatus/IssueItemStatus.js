@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { OpenIssueIcon } from 'components/Icons';
 
 const IssueItemStatus = ({state}) => {
@@ -9,6 +10,10 @@ const IssueItemStatus = ({state}) => {
       {icon}
     </div>
   );
+};
+
+IssueItemStatus.propTypes = {
+  state: PropTypes.string
 };
 
 export default IssueItemStatus;

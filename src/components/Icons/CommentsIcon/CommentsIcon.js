@@ -9,5 +9,4 @@ const CommentsIcon = ({ className }) => (
   </span>
 );
 
-
 export default CommentsIcon;

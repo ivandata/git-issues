@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import IssueItemComments from 'components/IssueItemComments';
 import IssueItemStatus from 'components/IssueItemStatus';
 import IssueLabel from 'components/IssueLabel';
@@ -23,6 +24,10 @@ const IssueItem = ({issues}) => {
     )
   });
 
+};
+
+IssueItem.propTypes = {
+  issues: PropTypes.array
 };
 
 export default IssueItem;

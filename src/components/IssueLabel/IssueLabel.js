@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './styles.css';
 
 const IssueLabel = ({labels}) => {
@@ -11,5 +12,8 @@ const IssueLabel = ({labels}) => {
   });
 };
 
+IssueLabel.propTypes = {
+  labels: PropTypes.array
+};
 
 export default IssueLabel;

@@ -9,5 +9,4 @@ const OpenIssueIcon = ({ className }) => (
   </span>
 );
 
-
 export default OpenIssueIcon;

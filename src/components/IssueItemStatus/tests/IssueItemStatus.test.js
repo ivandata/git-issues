@@ -1,10 +1,11 @@
 import React from 'react';
 import Enzyme, { shallow } from 'enzyme';
-import Adapter from 'enzyme-adapter-react-16';
+import { expect } from "chai";
+
 import { OpenIssueIcon } from 'components/Icons';
 import IssueItemStatus from 'components/IssueItemStatus';
-import {expect} from "chai";
 
+import Adapter from 'enzyme-adapter-react-16';
 Enzyme.configure({ adapter: new Adapter() });
 
 describe('<IssueItemStatus />', () => {

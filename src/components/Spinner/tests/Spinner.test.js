@@ -1,9 +1,10 @@
 import React from 'react';
 import Enzyme, { shallow } from 'enzyme';
 import { expect } from 'chai';
-import Spinner from 'components/Spinner';
-import Adapter from 'enzyme-adapter-react-16';
 
+import Spinner from 'components/Spinner';
+
+import Adapter from 'enzyme-adapter-react-16';
 Enzyme.configure({ adapter: new Adapter() });
 
 describe('<Spinner />', () => {
@@ -25,7 +26,7 @@ describe('<Spinner />', () => {
     expect(renderedComponent.first().type()).to.equal('div');
   });
 
-  it('should has right class name', () => {
+  it('should have right class name', () => {
     expect(renderedComponent.hasClass('spinner')).to.equal(true);
   });
 });

@@ -1,9 +1,16 @@
 .issue-comments {
   white-space: nowrap;
   font-size: 12px;
+  display: none;
 }
 
 .comments-count {
   margin-left: 5px;
   font-weight: bold;
+}
+
+@media (min-width: 768px) {
+  .issue-comments {
+    display: block;
+  }
 }

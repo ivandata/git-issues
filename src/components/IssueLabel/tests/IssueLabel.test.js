@@ -1,9 +1,10 @@
 import React from 'react';
-import IssueLabel from 'components/IssueLabel';
 import Enzyme, { shallow } from 'enzyme';
 import { expect } from 'chai';
-import Adapter from 'enzyme-adapter-react-16';
 
+import IssueLabel from 'components/IssueLabel';
+
+import Adapter from 'enzyme-adapter-react-16';
 Enzyme.configure({ adapter: new Adapter() });
 
 describe('<IssueLabel />', () => {

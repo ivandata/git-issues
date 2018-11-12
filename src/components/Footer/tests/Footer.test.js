@@ -1,14 +1,15 @@
 import React from 'react';
 import Enzyme, { shallow } from 'enzyme';
 import { expect } from 'chai';
+
 import Footer from 'components/Footer';
 import Spinner from 'components/Spinner';
-import Adapter from 'enzyme-adapter-react-16';
 
+import Adapter from 'enzyme-adapter-react-16';
 Enzyme.configure({ adapter: new Adapter() });
 
 describe('<Footer />', () => {
-  it('should render a Spinner', () => {
+  it('should render the Spinner', () => {
     const renderedComponent = shallow(<Footer />);
     expect(renderedComponent.contains(<Spinner className=''/>)).to.equal(true);
   });

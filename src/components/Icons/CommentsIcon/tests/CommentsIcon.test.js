@@ -1,9 +1,10 @@
 import React from 'react';
 import Enzyme, { shallow } from 'enzyme';
 import { expect } from 'chai';
-import CommentsIcon from 'components/Icons/CommentsIcon';
-import Adapter from 'enzyme-adapter-react-16';
 
+import CommentsIcon from 'components/Icons/CommentsIcon';
+
+import Adapter from 'enzyme-adapter-react-16';
 Enzyme.configure({ adapter: new Adapter() });
 
 describe('<CommentsIcon />', () => {

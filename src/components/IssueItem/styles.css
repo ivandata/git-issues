@@ -19,10 +19,22 @@
   font-weight: bold;
   color: #E6E8BF;
   margin-right: 10px;
+  display: block;
+  font-size: 14px;
 }
 
 .issue-desc {
   margin-top: 5px;
-  font-size: 12px;
+  font-size: 10px;
 }
 
+@media (min-width: 768px) {
+  .issue-link {
+    font-size: 16px;
+    display: inline-block;
+  }
+
+  .issue-desc {
+    font-size: 12px;
+  }
+}
